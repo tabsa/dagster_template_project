@@ -1,0 +1,29 @@
+[project]
+name = "dagster-template-project"
+version = "0.1.0"
+description = "Python environment for this repository"
+authors = [
+    {name = "tabsa",email = "tas.tiago.sousa@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "dagster",
+    "dagster-webserver",
+    "dagster-duckdb",
+    "dagster-pandas",
+    "pandas",
+    "duckdb",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "ruff",
+    "black",
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
