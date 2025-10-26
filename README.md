@@ -18,4 +18,11 @@ I started by implementing the dagster [quick-start](https://docs.dagster.io/gett
    ├── tests
    │   └── __init__.py
 ```
-I also used the `sample_data.csv` part of the **quick-start** guide.
+I also used the `sample_data.csv` part of the **quick-start** guide. As part of this quick-start guide, you have to create the `workspace.yaml` file so dagster knows **what code to load** when you run `dagster dev`.
+
+For this guide, the `workspace` file content is 
+```yaml
+load_from:
+  - python_file: src/dagster_template_project/definitions.py
+```
+Then you run the CLI command `dagster dev`.
